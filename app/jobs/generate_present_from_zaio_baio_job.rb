@@ -1,6 +1,6 @@
 class GeneratePresentFromZaioBaioJob < ActiveJob::Base
 
   def perform(letter)
-    GeneratePresent.execute letter
+    GeneratePresent.for letter, Vendors::ZaioBaio
   end
 end

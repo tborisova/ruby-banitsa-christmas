@@ -1,6 +1,6 @@
 class GeneratePresentFromDodoJob < ActiveJob::Base
 
   def perform(letter)
-    GeneratePresent.execute letter
+    GeneratePresent.for letter, Vendors::Dodo
   end
 end
